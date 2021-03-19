@@ -1,0 +1,190 @@
+/* * Patrones Globales del CSS */ 
+
+/* Tipografía Principal */
+h1, h2, h3, h6, a, button  {font-family: 'Roboto', sans-serif;}
+
+/* Tipografía Secundaria */
+h4, h5, p, div, form, input, select, option, textarea, span, em, strong  {font-family: 'Shippori Mincho', serif;}
+
+/* Quitar el Margen por defecto que trae Body */
+body { margin: 0 !important; }
+
+/* Cargar el display: block; a todos los tags de estructura */
+header, main, section, footer, aside, article, nav, figure, figcaption, div { display: block; }
+
+/* Quitar margen por defecto a todas las tags de texto */
+h1, h2, h3, h4, h5, h6, p { margin: 0; }
+
+/* Quitar Scroll Horizontal*/
+body {overflow-x: hidden;}
+
+/* ---------------------------------------------------- */
+
+/* CSS propio */
+
+/* Componente: Menú Móviles */ 
+aside#menu-movil { width: 290px; height: 100%; display: block; margin: 0; float: none; position: fixed; top: 0; left: -290px; z-index: 99998; background:  rgb(245, 41, 160) }
+
+aside#menu-movil a#abrir { width: 40px; height: auto; display: block; margin: 0; float: none; position: absolute; top: 30px; right: -60px; z-index: 99996; background: transparent; color:  rgb(245, 41, 160); text-align: center; font-size: 1.3em; padding: 8px 0; transition: all 0.3s ease-in; }
+aside#menu-movil a#abrir:hover { color: #999; transition: all 0.3s ease-in; }
+
+aside#menu-movil a#cerrar { width: 40px; height: auto; display: none; margin: 0; float: none; position: absolute; top: 30px; right: -60px; z-index: 99996; background:transparent; color: #f529a0 ; text-align: center; font-size: 1.3em; padding: 8px 0; transition: all 0.3s ease-in; }
+aside#menu-movil a#cerrar:hover { color: #999; transition: all 0.3s ease-in; }
+
+aside#menu-movil nav  {width: 70%; height: auto; display: block; margin: 40px auto 0 auto; float: none; position: relative ;}
+aside#menu-movil nav a {width: 100%; height: auto; display: block; margin: 0 auto 25px; float: none; position: relative; color:#ffff; text-decoration: none; transition: all 0.3s ease-in; }
+aside#menu-movil nav a:hover {color: #999; transition: all 0.3s ease-in; }
+
+/* Componente: HEADER */
+
+header { width: 100%; height: 100px; position: fixed; top: 0; left: 0; z-index: 9999; margin: 0; float: none;  }
+header article { width: 1100px; height: 100px; position: relative; margin: 0 auto; float: none; }
+
+header article a { width: 189px; height: 80px; display: block; position: relative; margin: 0 auto; float: none; top: 10px; }
+
+header article a img { width: auto; height: 80px; display: block; position: relative; margin: 0 auto; float: none; }
+
+.trnaparente    {background: rgb(0, 0, 0/ 0%);}
+.negro   {background: rgb(0, 0, 0/ 100%);}
+
+
+/* Componente: Contenedor MAIN */
+main { width: 100%; height: auto; position: relative; margin: 0 auto; float: none;}
+
+
+/* Componente: BANNER SLIDER */
+main section#banner-slider { width: 100%; height: auto; position: relative; margin: 0 auto; float: none; }
+main section#banner-slider article { width: 100%; height: 100vh; position: relative; margin: 0 auto; float: none; }
+main section#banner-slider article figure { width: 100%; height: 100vh; position: relative; margin: 0; float: left; }
+main section#banner-slider article figure.slider-01 { background: url(../img/slider-01.jpg) no-repeat top center; background-size: cover; }
+main section#banner-slider article figure.slider-02 { background: url(../img/slider-02.jpg) no-repeat top center; background-size: cover; }
+main section#banner-slider article figure.slider-03 { background: url(../img/slider-03.jpg) no-repeat top center; background-size: cover; }
+
+.slick-next { right: 30px !important; z-index: 999 !important; }
+.slick-prev { left: 30px !important; z-index: 999 !important; }
+
+.slick-dots { bottom: 30px !important; }
+.slick-dots li button { width: 10px !important; height: 10px !important; }
+.slick-dots li button:before { width: 10px !important; height: 10px !important; font-size: 1em !important; color: transparent !important; border-radius: 50% !important; background: rgb(245, 41, 160) !important; opacity: 1 !important; }
+.slick-dots li.slick-active button:before { color: transparent !important; background: #fff !important; opacity: 1 !important; }
+
+
+
+/* Componente: BANNER*/
+
+main section#banner {width: 100%; height: auto; position: relative; margin: 0 auto; float: none;}
+
+main section#banner nav {width: 100%; height: 600px; position: relative; margin: 0 auto; float: none; background: rgb(245, 41, 160) }
+main section#banner nav a   {position: absolute; display: block; transition: 0.3s ease-in;}
+main section#banner nav a:hover   {opacity: 0.80; transition: 0.3s ease-in;}
+
+main section#banner nav a#img-banner-01 {width: 50%; height: 100%; top: 0; left: 0; background:url(../img/fotos-grupo-1-001.jpg) no-repeat top center; background-size: cover;} 
+main section#banner nav a#img-banner-02 {width: 50%; height: 50%; top: 0; right: 0; background: url(../img/fotos-grupo-1-002.jpg) no-repeat top center; background-size: cover;} 
+main section#banner nav a#img-banner-03 {width: 20%; height: 50%; bottom: 0; right: 30%; background: url(../img/fotos-grupo-1-003.jpg) no-repeat top center; background-size: cover;}
+main section#banner nav a#img-banner-04 {width: 30%; height: 50%; bottom: 0; right: 0; background: url(../img/fotos-grupo-1-004.jpg) no-repeat top center; background-size: cover;}
+
+
+/* Componente: GRID  */
+
+main section#grid   {width: 100%; height: auto; position: relative; margin: 0 auto; float: none;}
+main section#grid article   {width: 1100PX; height: auto; position: relative; margin: 0 auto; float: none;  padding: 80px 0;}
+main section#grid article a {width: 330px; height: 330px; position: relative; display: inline-block; margin: 17px; float: none; transition: all 0.3s ease-in; overflow: hidden;} 
+main section#grid article a img {width: 100%; height: auto; display: block; position: relative; margin: 0 auto; float: none;  transition: all 0.3s ease-in;}
+main section#grid article a:hover   {opacity: 0.8; transition: all 0.3s ease-in;}
+main section#grid article a:hover img {transform: scale(1.05); transition: all 0.3s ease-in;}
+
+
+/* Componente: FOTOS PHOTOSHOOT */
+main section#fotos-photoshoot {width: 100%; height: auto; position: relative; margin: 0 auto; float: none;}
+
+main section#fotos-photoshoot a#btn-rosado  {width: 40px; height: 25px; display: block; float: none; position: absolute; top: -25px; left: 150px; z-index: 50; border-radius: 50%; color: #ffff; background: rgb(245, 41, 160); text-align: center;text-decoration: none; font-size: 2.3em; line-height: 0.7em; padding: 8px 0; transition: all 0.3s ease-in;}
+main section#fotos-photoshoot a#btn-rosado:hover  {top: -25px; left: 150px; background:  rgb(161, 41, 111) ; transition: all 0.3s ease-in;}
+
+main section#fotos-photoshoot  nav {width: 100%; height: 1000px; position: relative; margin: 0 auto; float: none; background: rgb(245, 41, 160)}
+main section#fotos-photoshoot  nav a   {position: absolute; display: block; transition: 0.3s ease-in;}
+main section#fotos-photoshoot  nav a:hover  {opacity: 0.80; transition: 0.3s ease-in;}
+
+
+main section#fotos-photoshoot  nav a#img-fotos-photoshoot-01 {width: 50%; height: 50%; top: 0; left: 0; background:url(../img/fotos-grupo-3-001.jpg) no-repeat top center; background-size: cover;}  
+
+main section#fotos-photoshoot  nav a#img-fotos-photoshoot-02 {width: 25%; height: 25%; top: 0; right: 25%; background:url(../img/fotos-grupo-3-002.jpg) no-repeat top center; background-size: cover;} 
+
+main section#fotos-photoshoot  nav a#img-fotos-photoshoot-03 {width: 25%; height: 25%; top: 0; right: 0; background:url(../img/fotos-grupo-3-003.jpg) no-repeat top center; background-size: cover;} 
+
+main section#fotos-photoshoot  nav a#img-fotos-photoshoot-04 {width: 50%; height: 25%; top: 25%; right: 0; background:url(../img/fotos-grupo-3-004.jpg) no-repeat top center; background-size: cover;} 
+
+main section#fotos-photoshoot  nav a#img-fotos-photoshoot-05 {width: 50%; height: 25%; bottom: 25%; left: 0; background:url(../img/fotos-grupo-3-005.jpg) no-repeat top center; background-size: cover;} 
+
+main section#fotos-photoshoot  nav a#img-fotos-photoshoot-06 {width: 25%; height: 25%; bottom: 0; left: 0; background:url(../img/fotos-grupo-3-006.jpg) no-repeat top center; background-size: cover;} 
+
+main section#fotos-photoshoot  nav a#img-fotos-photoshoot-07 {width: 25%; height: 25%; bottom: 0; left: 25%; background:url(../img/fotos-grupo-3-007.jpg) no-repeat top center; background-size: cover;} 
+
+main section#fotos-photoshoot  nav a#img-fotos-photoshoot-08 {width: 50%; height: 50%; bottom: 0; right: 0; background:url(../img/fotos-grupo-3-008.jpg) no-repeat top center; background-size: cover;} 
+
+/* Zona de Media Queries */
+
+/* MQ para Tablets = Breakpoint 1199px */
+@media only screen and (max-width: 1199px){
+
+aside#menu-movil a#abrir {top: 22px;}
+aside#menu-movil a#cerrar {top: 22px;}
+
+header { height: 80px; background: #000;}
+header article { width: 90%; height: 80px;}
+header article a { width: 118px; height: 55px; margin: 0; float: right; top: 15px; }
+header article a img { width: 100%; height: auto; margin: 0; }
+
+main {margin: 80px auto 0 auto;}
+
+main section#banner nav {height: 472px;}
+main section#banner nav a   {position: relative; float: left; }
+main section#banner nav a#img-banner-01 {width: 50%; height: 50%;} 
+main section#banner nav a#img-banner-02 {width: 50%; height: 50%;} 
+main section#banner nav a#img-banner-03 {width: 50%; height: 50%; right: 0;}
+main section#banner nav a#img-banner-04 {width: 50%; height: 50%;}
+
+main section#grid article   {width: 80%;}
+main section#grid article a {width: 300px; height: 300px; display: block; margin: 0 auto 35px; } 
+
+
+main section#fotos-photoshoot nav {height: 1030px;}
+
+main section#fotos-photoshoot a#btn-rosado  {top: 40px; left: 25px;}
+main section#fotos-photoshoot a#btn-rosado:hover  {top: 40px; left: 25px; background:  rgb(161, 41, 111) ; transition: all 0.3s ease-in;}
+
+main section#fotos-photoshoot nav a   {position: relative; float: left; }
+
+
+
+main section#fotos-photoshoot nav a#img-fotos-photoshoot-01 {width: 100%; height: 290px;} 
+main section#fotos-photoshoot nav a#img-fotos-photoshoot-02 {width: 50%; height: 150px;} 
+main section#fotos-photoshoot nav a#img-fotos-photoshoot-03 {width: 50%; height: 150px;}
+main section#fotos-photoshoot nav a#img-fotos-photoshoot-04 {width: 50%; height: 150px;}
+main section#fotos-photoshoot nav a#img-fotos-photoshoot-05 {width: 50%; height: 150px;}
+main section#fotos-photoshoot nav a#img-fotos-photoshoot-06 {width: 50%; height: 150px;}
+
+main section#fotos-photoshoot nav a#img-fotos-photoshoot-07 {width: 50%; height: 150px;}
+main section#fotos-photoshoot nav a#img-fotos-photoshoot-02 {right: 0;} 
+main section#fotos-photoshoot nav a#img-fotos-photoshoot-04 {top: 0;}
+main section#fotos-photoshoot nav a#img-fotos-photoshoot-05 {bottom: 0;}
+main section#fotos-photoshoot nav a#img-fotos-photoshoot-07 {left: 0;}
+
+main section#fotos-photoshoot nav a#img-fotos-photoshoot-08 {width: 100%; height: 290px;}
+
+}
+
+
+
+
+/* Breakpoint 799px */
+@media only screen and (max-width: 799px){
+}
+
+/* MQ para Móviles Grandes = Breakpoint 499px */
+@media only screen and (max-width: 499px){
+}
+
+/* MQ para Móviles Pequeños = Breakpoint 399px */
+@media only screen and (max-width: 399px){
+main section#grid article a {width: 100%; height: auto; display: block; margin: 0 auto 35px;} 
+}
